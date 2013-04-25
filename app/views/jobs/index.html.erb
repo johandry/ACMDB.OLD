@@ -1,0 +1,89 @@
+<h1>Listing jobs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Job type</th>
+      <th>Box name</th>
+      <th>Owner</th>
+      <th>Command</th>
+      <th>Machine</th>
+      <th>Permission</th>
+      <th>Date condition</th>
+      <th>Days of week</th>
+      <th>Start times</th>
+      <th>Condition</th>
+      <th>Short description</th>
+      <th>Str out file</th>
+      <th>Str err file</th>
+      <th>Alarm if fail</th>
+      <th>Avg runtime min</th>
+      <th>Avg runtime sec</th>
+      <th>Max runtime min</th>
+      <th>Contacts</th>
+      <th>System</th>
+      <th>System type</th>
+      <th>Description</th>
+      <th>Priority</th>
+      <th>Critical</th>
+      <th>Actions</th>
+      <th>Notes</th>
+      <th>Submited by</th>
+      <th>Created on</th>
+      <th>Modified by</th>
+      <th>Last modified on</th>
+      <th>Update log</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobs.each do |job| %>
+    <tr>
+      <td><%= job.name %></td>
+      <td><%= job.job_type %></td>
+      <td><%= job.box_name %></td>
+      <td><%= job.owner %></td>
+      <td><%= job.command %></td>
+      <td><%= job.machine %></td>
+      <td><%= job.permission %></td>
+      <td><%= job.date_condition %></td>
+      <td><%= job.days_of_week %></td>
+      <td><%= job.start_times %></td>
+      <td><%= job.condition %></td>
+      <td><%= job.short_description %></td>
+      <td><%= job.str_out_file %></td>
+      <td><%= job.str_err_file %></td>
+      <td><%= job.alarm_if_fail %></td>
+      <td><%= job.avg_runtime_min %></td>
+      <td><%= job.avg_runtime_sec %></td>
+      <td><%= job.max_runtime_min %></td>
+      <td><%= job.contacts %></td>
+      <td><%= job.system %></td>
+      <td><%= job.system_type %></td>
+      <td><%= job.description %></td>
+      <td><%= job.priority %></td>
+      <td><%= job.critical %></td>
+      <td><%= job.actions %></td>
+      <td><%= job.notes %></td>
+      <td><%= job.submited_by %></td>
+      <td><%= job.created_on %></td>
+      <td><%= job.modified_by %></td>
+      <td><%= job.last_modified_on %></td>
+      <td><%= job.update_log %></td>
+      <td><%= job.status %></td>
+      <td><%= link_to 'Show', job %></td>
+      <td><%= link_to 'Edit', edit_job_path(job) %></td>
+      <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Job', new_job_path %>

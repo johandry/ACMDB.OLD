@@ -1,0 +1,165 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @job.name %>
+</p>
+
+<p>
+  <strong>Job type:</strong>
+  <%= @job.job_type %>
+</p>
+
+<p>
+  <strong>Box name:</strong>
+  <%= @job.box_name %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @job.owner %>
+</p>
+
+<p>
+  <strong>Command:</strong>
+  <%= @job.command %>
+</p>
+
+<p>
+  <strong>Machine:</strong>
+  <%= @job.machine %>
+</p>
+
+<p>
+  <strong>Permission:</strong>
+  <%= @job.permission %>
+</p>
+
+<p>
+  <strong>Date condition:</strong>
+  <%= @job.date_condition %>
+</p>
+
+<p>
+  <strong>Days of week:</strong>
+  <%= @job.days_of_week %>
+</p>
+
+<p>
+  <strong>Start times:</strong>
+  <%= @job.start_times %>
+</p>
+
+<p>
+  <strong>Condition:</strong>
+  <%= @job.condition %>
+</p>
+
+<p>
+  <strong>Short description:</strong>
+  <%= @job.short_description %>
+</p>
+
+<p>
+  <strong>Str out file:</strong>
+  <%= @job.str_out_file %>
+</p>
+
+<p>
+  <strong>Str err file:</strong>
+  <%= @job.str_err_file %>
+</p>
+
+<p>
+  <strong>Alarm if fail:</strong>
+  <%= @job.alarm_if_fail %>
+</p>
+
+<p>
+  <strong>Avg runtime min:</strong>
+  <%= @job.avg_runtime_min %>
+</p>
+
+<p>
+  <strong>Avg runtime sec:</strong>
+  <%= @job.avg_runtime_sec %>
+</p>
+
+<p>
+  <strong>Max runtime min:</strong>
+  <%= @job.max_runtime_min %>
+</p>
+
+<p>
+  <strong>Contacts:</strong>
+  <%= @job.contacts %>
+</p>
+
+<p>
+  <strong>System:</strong>
+  <%= @job.system %>
+</p>
+
+<p>
+  <strong>System type:</strong>
+  <%= @job.system_type %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @job.description %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @job.priority %>
+</p>
+
+<p>
+  <strong>Critical:</strong>
+  <%= @job.critical %>
+</p>
+
+<p>
+  <strong>Actions:</strong>
+  <%= @job.actions %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @job.notes %>
+</p>
+
+<p>
+  <strong>Submited by:</strong>
+  <%= @job.submited_by %>
+</p>
+
+<p>
+  <strong>Created on:</strong>
+  <%= @job.created_on %>
+</p>
+
+<p>
+  <strong>Modified by:</strong>
+  <%= @job.modified_by %>
+</p>
+
+<p>
+  <strong>Last modified on:</strong>
+  <%= @job.last_modified_on %>
+</p>
+
+<p>
+  <strong>Update log:</strong>
+  <%= @job.update_log %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @job.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>

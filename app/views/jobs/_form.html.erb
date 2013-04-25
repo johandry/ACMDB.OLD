@@ -1,0 +1,145 @@
+<%= form_for(@job) do |f| %>
+  <% if @job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% @job.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :job_type %><br />
+    <%= f.text_field :job_type %>
+  </div>
+  <div class="field">
+    <%= f.label :box_name %><br />
+    <%= f.text_field :box_name %>
+  </div>
+  <div class="field">
+    <%= f.label :owner %><br />
+    <%= f.text_field :owner %>
+  </div>
+  <div class="field">
+    <%= f.label :command %><br />
+    <%= f.text_field :command %>
+  </div>
+  <div class="field">
+    <%= f.label :machine %><br />
+    <%= f.text_field :machine %>
+  </div>
+  <div class="field">
+    <%= f.label :permission %><br />
+    <%= f.text_field :permission %>
+  </div>
+  <div class="field">
+    <%= f.label :date_condition %><br />
+    <%= f.number_field :date_condition %>
+  </div>
+  <div class="field">
+    <%= f.label :days_of_week %><br />
+    <%= f.text_field :days_of_week %>
+  </div>
+  <div class="field">
+    <%= f.label :start_times %><br />
+    <%= f.text_field :start_times %>
+  </div>
+  <div class="field">
+    <%= f.label :condition %><br />
+    <%= f.text_field :condition %>
+  </div>
+  <div class="field">
+    <%= f.label :short_description %><br />
+    <%= f.text_field :short_description %>
+  </div>
+  <div class="field">
+    <%= f.label :str_out_file %><br />
+    <%= f.text_field :str_out_file %>
+  </div>
+  <div class="field">
+    <%= f.label :str_err_file %><br />
+    <%= f.text_field :str_err_file %>
+  </div>
+  <div class="field">
+    <%= f.label :alarm_if_fail %><br />
+    <%= f.number_field :alarm_if_fail %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_runtime_min %><br />
+    <%= f.text_field :avg_runtime_min %>
+  </div>
+  <div class="field">
+    <%= f.label :avg_runtime_sec %><br />
+    <%= f.text_field :avg_runtime_sec %>
+  </div>
+  <div class="field">
+    <%= f.label :max_runtime_min %><br />
+    <%= f.text_field :max_runtime_min %>
+  </div>
+  <div class="field">
+    <%= f.label :contacts %><br />
+    <%= f.text_field :contacts %>
+  </div>
+  <div class="field">
+    <%= f.label :system %><br />
+    <%= f.text_field :system %>
+  </div>
+  <div class="field">
+    <%= f.label :system_type %><br />
+    <%= f.text_field :system_type %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br />
+    <%= f.text_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :critical %><br />
+    <%= f.text_field :critical %>
+  </div>
+  <div class="field">
+    <%= f.label :actions %><br />
+    <%= f.text_area :actions %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :submited_by %><br />
+    <%= f.text_field :submited_by %>
+  </div>
+  <div class="field">
+    <%= f.label :created_on %><br />
+    <%= f.date_select :created_on %>
+  </div>
+  <div class="field">
+    <%= f.label :modified_by %><br />
+    <%= f.text_field :modified_by %>
+  </div>
+  <div class="field">
+    <%= f.label :last_modified_on %><br />
+    <%= f.date_select :last_modified_on %>
+  </div>
+  <div class="field">
+    <%= f.label :update_log %><br />
+    <%= f.text_area :update_log %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
