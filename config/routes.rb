@@ -1,4 +1,5 @@
 ACMDB::Application.routes.draw do
+  devise_for :users
   resources :jobs
 
   get "welcome/index"

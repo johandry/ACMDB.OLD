@@ -36,3 +36,8 @@ gem 'jbuilder', '~> 1.0.1'
 
 # To use debugger
 # gem 'debugger'
+
+# Added by Johandry Amador
+gem 'devise'
+# Needed for Rails 4 and Devise
+gem 'protected_attributes'
