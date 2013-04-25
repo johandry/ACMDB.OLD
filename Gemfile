@@ -41,3 +41,6 @@ gem 'jbuilder', '~> 1.0.1'
 gem 'devise'
 # Needed for Rails 4 and Devise
 gem 'protected_attributes'
+
+gem 'bootstrap-sass'
+gem 'simple_form'
