@@ -16,6 +16,7 @@ class JobsController < ApplicationController
   # GET /jobs/new
   def new
     @job = Job.new
+    @job_types = ['Job', 'Box', 'Filewatchet']
   end
 
   # GET /jobs/1/edit
