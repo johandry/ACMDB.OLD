@@ -1,36 +1,39 @@
-<%= simple_form_for(@job) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :job_type, collection: @job_types %>
-    <%= f.input :box_name %>
-    <%= f.input :owner, placeholder: 'bkpbtch@bkglobal' %>
-    <%= f.input :command %>
-    <%= f.input :machine %>
-    <%= f.input :permission %>
-    <%= f.input :date_condition %>
-    <%= f.input :days_of_week %>
-    <%= f.input :start_times %>
-    <%= f.input :condition %>
-    <%= f.input :short_description %>
-    <%= f.input :str_out_file, label: 'Standard Output File' %>
-    <%= f.input :str_err_file, label: 'Standard Error File' %>
-    <%= f.input :alarm_if_fail, placeholder: '1' %>
-    <%= f.input :avg_runtime_min, label: 'Average Runtime (Minutes)' %>
-    <%= f.input :avg_runtime_sec, label: 'Average Runtime (Seconds)' %>
-    <%= f.input :max_runtime_min, label: 'Maximum Runtime (Minutes)' %>
-    <%= f.input :contacts %>
-    <%= f.input :system %>
-    <%= f.input :system_type %>
-    <%= f.input :description %>
-    <%= f.input :priority %>
-    <%= f.input :critical %>
-    <%= f.input :actions %>
-    <%= f.input :notes %>
-    <%= f.input :submited_by %>
-    <%= f.input :created_on %>
-    <%= f.input :modified_by %>
-    <%= f.input :last_modified_on %>
-    <%= f.input :update_log %>
-    <%= f.input :status %>
-
-    <%= f.button :submit %>
+<%= simple_form_for @job, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :name %>
+  <%= f.input :job_type, collection: @job_types %>
+  <%= f.input :box_name %>
+  <%= f.input :owner, placeholder: 'bkpbtch@bkglobal' %>
+  <%= f.input :command %>
+  <%= f.input :machine %>
+  <%= f.input :permission %>
+  <%= f.input :date_condition %>
+  <%= f.input :days_of_week %>
+  <%= f.input :start_times %>
+  <%= f.input :condition %>
+  <%= f.input :short_description %>
+  <%= f.input :str_out_file, label: 'Standard Output File' %>
+  <%= f.input :str_err_file, label: 'Standard Error File' %>
+  <%= f.input :alarm_if_fail, placeholder: '1' %>
+  <%= f.input :avg_runtime_min, label: 'Average Runtime (Minutes)' %>
+  <%= f.input :avg_runtime_sec, label: 'Average Runtime (Seconds)' %>
+  <%= f.input :max_runtime_min, label: 'Maximum Runtime (Minutes)' %>
+<%= f.input :contacts %>
+  <%= f.input :system %>
+  <%= f.input :system_type %>
+  <%= f.input :description %>
+  <%= f.input :priority %>
+  <%= f.input :critical %>
+  <%= f.input :actions %>
+  <%= f.input :notes %>
+  <%= f.input :submited_by %>
+  <%= f.input :created_on %>
+  <%= f.input :modified_by %>
+  <%= f.input :last_modified_on %>
+  <%= f.input :update_log %>
+  <%= f.input :status %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                jobs_path, :class => 'btn' %>
+  </div>
 <% end %>
