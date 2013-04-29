@@ -16,9 +16,11 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
   
-  gem "therubyracer"
-  gem "less-rails"
-  gem 'twitter-bootstrap-rails'
+  # Use/uncomment twitter-botstrap-rails with less when you need to use a theme.
+  # gem "therubyracer"
+  # gem "less-rails"
+  # gem 'twitter-bootstrap-rails'
+  gem 'bootstrap-sass'
 end
 
 gem 'jquery-rails'
@@ -41,10 +43,8 @@ gem 'jbuilder', '~> 1.0.1'
 # To use debugger
 # gem 'debugger'
 
-# Added by Johandry Amador
 gem 'devise'
 # Needed for Rails 4 and Devise
 gem 'protected_attributes'
 
-gem 'bootstrap-sass'
 gem 'simple_form'

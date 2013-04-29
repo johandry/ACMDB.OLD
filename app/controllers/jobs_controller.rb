@@ -21,6 +21,7 @@ class JobsController < ApplicationController
 
   # GET /jobs/1/edit
   def edit
+    @job_types = ['Job', 'Box', 'Filewatchet']
   end
 
   # POST /jobs
