@@ -15,7 +15,7 @@
   <dt><strong><%= model_class.human_attribute_name(:command) %>:</strong></dt>
   <dd><%= @job.command %></dd>
   <dt><strong><%= model_class.human_attribute_name(:machine) %>:</strong></dt>
-  <dd><%= @job.machine %></dd>
+  <dd><%= @job.machine ? @job.machine.name+" ("+@job.machine.ip+")" : "None" %></dd>
   <dt><strong><%= model_class.human_attribute_name(:permission) %>:</strong></dt>
   <dd><%= @job.permission %></dd>
   <dt><strong><%= model_class.human_attribute_name(:date_condition) %>:</strong></dt>

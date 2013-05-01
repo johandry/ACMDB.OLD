@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  server_name: MyString
+  status: MyString
+  ip: MyString
+  os: MyString
+  environment: MyString
+  hosting: MyString
+  hoster: MyString
+  system: MyString
+  system_type: MyString
+  backup_server: MyString
+
+two:
+  name: MyString
+  server_name: MyString
+  status: MyString
+  ip: MyString
+  os: MyString
+  environment: MyString
+  hosting: MyString
+  hoster: MyString
+  system: MyString
+  system_type: MyString
+  backup_server: MyString

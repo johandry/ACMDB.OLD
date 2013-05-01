@@ -1,4 +1,6 @@
 ACMDB::Application.routes.draw do
+  resources :machines
+
   devise_for :users
   resources :jobs
 

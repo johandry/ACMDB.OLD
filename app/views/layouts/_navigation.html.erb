@@ -11,6 +11,8 @@
 	  <li class="divider-vertical"></li>
 	  <li><%= link_to "Jobs", jobs_path %></li>
 	  <li class="divider-vertical"></li>
+	  <li><%= link_to "Machines", machines_path %></li>
+	  <li class="divider-vertical"></li>
 	  <% if user_signed_in? %>
 	    <li>
 	    <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>

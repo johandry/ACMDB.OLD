@@ -17,9 +17,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   
   # Use/uncomment twitter-botstrap-rails with less when you need to use a theme.
-  # gem "therubyracer"
-  # gem "less-rails"
-  # gem 'twitter-bootstrap-rails'
+  gem "therubyracer"
+  gem "less-rails"
+  gem 'twitter-bootstrap-rails'
   gem 'bootstrap-sass'
 end
 

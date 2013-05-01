@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130425190532) do
+ActiveRecord::Schema.define(version: 20130501162304) do
 
   create_table "jobs", force: true do |t|
     t.string   "name"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20130425190532) do
     t.string   "box_name"
     t.string   "owner"
     t.string   "command"
-    t.string   "machine"
     t.string   "permission"
     t.integer  "date_condition"
     t.string   "days_of_week"
@@ -46,6 +45,23 @@ ActiveRecord::Schema.define(version: 20130425190532) do
     t.date     "last_modified_on"
     t.text     "update_log"
     t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "machine_id"
+  end
+
+  create_table "machines", force: true do |t|
+    t.string   "name"
+    t.string   "server_name"
+    t.string   "status"
+    t.string   "ip"
+    t.string   "os"
+    t.string   "environment"
+    t.string   "hosting"
+    t.string   "hoster"
+    t.string   "system"
+    t.string   "system_type"
+    t.string   "backup_server"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

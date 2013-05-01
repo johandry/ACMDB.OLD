@@ -1,0 +1,41 @@
+<%- model_class = Machine -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @machine.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:server_name) %>:</strong></dt>
+  <dd><%= @machine.server_name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:status) %>:</strong></dt>
+  <dd><%= @machine.status %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:ip) %>:</strong></dt>
+  <dd><%= @machine.ip %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:os) %>:</strong></dt>
+  <dd><%= @machine.os %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:environment) %>:</strong></dt>
+  <dd><%= @machine.environment %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:hosting) %>:</strong></dt>
+  <dd><%= @machine.hosting %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:hoster) %>:</strong></dt>
+  <dd><%= @machine.hoster %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:system) %>:</strong></dt>
+  <dd><%= @machine.system %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:system_type) %>:</strong></dt>
+  <dd><%= @machine.system_type %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:backup_server) %>:</strong></dt>
+  <dd><%= @machine.backup_server %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              machines_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_machine_path(@machine), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              machine_path(@machine),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
