@@ -21,6 +21,8 @@ group :assets do
   gem "less-rails"
   gem 'twitter-bootstrap-rails'
   gem 'bootstrap-sass'
+  
+  gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
 end
 
 gem 'jquery-rails'
@@ -48,3 +50,5 @@ gem 'devise'
 gem 'protected_attributes'
 
 gem 'simple_form'
+
+gem 'will_paginate'

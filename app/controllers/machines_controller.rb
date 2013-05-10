@@ -1,4 +1,5 @@
 class MachinesController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_machine, only: [:show, :edit, :update, :destroy]
 
   # GET /machines
